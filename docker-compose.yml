@@ -1,0 +1,23 @@
+version: "3"
+services:
+    #tihs is our fist container
+    web:
+        tty: true
+        build: 
+            context: .
+            dockerfile: Dockerfile.dev
+        ports: 
+            - "8000:3000"
+        volumes: 
+            - /app/node_modules
+            - .:/app
+    #this is our test container which is seperate from web
+    test:
+        tty: true
+        build: 
+            context: .
+            dockerfile: Dockerfile.dev
+        volumes:
+            - /app/node_modules
+            - .:/app
+        command: ["npm", "run", "test"]
