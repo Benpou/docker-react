@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hi there  from volume v777 new release out of r04 - change tag!!
+          Hi there  from volume Release 7 - change tag!!
         </p>
         <a
           className="App-link"
